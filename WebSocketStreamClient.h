@@ -14,7 +14,7 @@ public:
     _path = path;
   }
 
-  int connect(CONST IPAddress &ip, uint16_t port)
+  int connect(const IPAddress ip, uint16_t port)
   {
     _webSocketClient->begin(_path);
     return 1;
@@ -73,19 +73,19 @@ public:
     return _webSocketClient->peek();
   }
 
-  bool flush(unsigned int maxWaitMs = 0) {
+  void flush() {
     if (!connected())
-      return false;
+      return;
     _webSocketClient->flush();
-    return true;
+    return;
   }
 
-  bool stop(unsigned int maxWaitMs = 0)
+  void stop()
   {
     if (!connected())
-      return false;
+      return;
     _webSocketClient->stop();
-    return true;
+    return;
   }
 
   uint8_t connected()
