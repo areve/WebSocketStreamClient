@@ -11,7 +11,7 @@ public:
   {
   }
 
-  int connect(CONST IPAddress &ip, uint16_t port)
+  int connect(const IPAddress &ip, uint16_t port)
   {
     return WebSocketClient::connect(ip, port);
   }
