@@ -1,6 +1,6 @@
 # WebSocketStreamClient
 
-A WebSocketClient that implements Client.h so that the PubCubClient MQTT library can use it - with wss or ws.
+A WebSocketClient that implements Client.h so that the PubSubClient MQTT library can use it - with wss or ws.
 
 ## Dependencies
 
